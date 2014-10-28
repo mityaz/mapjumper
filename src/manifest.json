@@ -7,7 +7,7 @@
         "64": "mapjumper_icon_64.png"
     },
     "background": { "scripts": ["background.js"] },
-    "content_scripts": [{ 
+    "content_scripts": [{
         "matches": [
             "*://foursquare.com/*",
             "*://www.google.com/maps/*",
@@ -35,6 +35,7 @@
         "default_icon": "mapjumper_icon_64.png",
         "default_popup": "popup.html"
     },
+    "options_page": "options.html",
     "manifest_version": 2,
     "content_security_policy": "default-src 'none'; style-src 'self'; script-src 'self';"
 }
