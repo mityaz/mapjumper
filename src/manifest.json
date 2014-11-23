@@ -28,7 +28,8 @@
         ]
     }],
     "permissions": [
-        "tabs"
+        "tabs",
+        "storage"
     ],
     "page_action": {
         "default_name": "Jump to Other Maps!",
