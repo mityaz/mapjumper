@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head><title> Map Jumper Extension Options</title></head>
+<head>
+  <title> Map Jumper Extension Options</title>
+  <link href="options.css" rel="stylesheet" type="text/css">
+</head>
 <body>
-
-  Map providers:
-  <form id="providers">
-    <input type="checkbox" name="provider" value="foursquare">FourSquare<br/>
-    <input type="checkbox" name="provider" value="google">Google Maps<br/>
-    <input type="checkbox" name="provider" value="yandex">Yandex Maps<br/>
-    <input type="checkbox" name="provider" value="openstreet">OpenStreet Maps<br/>
-    <input type="checkbox" name="provider" value="bing">Bing Maps<br/>
-    <input type="checkbox" name="provider" value="wikimapia">Wikimapia<br/>
-  </form>
-  <div id="status"></div>
-  <button id="save">Save</button>
-
+  <div class='content'>
+    <h2>Map providers</h2>
+    <form id="providers">
+      <input type="checkbox" name="provider" value="foursquare">FourSquare<br/>
+      <input type="checkbox" name="provider" value="google">Google Maps<br/>
+      <input type="checkbox" name="provider" value="yandex">Yandex Maps<br/>
+      <input type="checkbox" name="provider" value="openstreet">OpenStreet Maps<br/>
+      <input type="checkbox" name="provider" value="bing">Bing Maps<br/>
+      <input type="checkbox" name="provider" value="wikimapia">Wikimapia<br/>
+    </form>
+    <div id="status"></div>
+    <button id="save">Save</button>
+  </div>
 <script src="options.js"></script>
 </body>
 </html>
