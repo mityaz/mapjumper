@@ -40,14 +40,26 @@ function generate_links() {
                 link_bing = link_bing.replace(/LAT/g,coordinates.lat);
                 link_bing = link_bing.replace(/LON/g,coordinates.lon);
                 link_bing = link_bing.replace('ZOOM',zoom);
-                document.getElementById('container').innerHTML = 
-                    link_bing + "<br/>" + 
-                    link_google + "<br/>" + 
-                    link_mapquest + "<br/>" + 
-                    link_osm + "<br/>" + 
-                    link_bugs + "<br/>" + 
-                    link_wikimapia + "<br/>" + 
-                    link_yandex;
+                chrome.storage.sync.get(
+                  'mapProviders', function(settings) {
+                    result_providers = "";
+                    for (var i = 0; i < settings.mapProviders.length; i++) {
+                        result_providers += ['link_'
+                                             , settings.mapProviders[i]
+                                             , '<br/>'
+                                            ].join("");
+                    }
+                    debugger;
+                  }
+                );
+                // document.getElementById('container').innerHTML =
+                //     link_bing + "<br/>" +
+                //     link_google + "<br/>" +
+                //     link_mapquest + "<br/>" +
+                //     link_osm + "<br/>" +
+                //     link_bugs + "<br/>" +
+                //     link_wikimapia + "<br/>" +
+                //     link_yandex;
             }
         });
     });
